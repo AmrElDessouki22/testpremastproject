@@ -1,11 +1,10 @@
 'use client';
 
-import { useContext } from 'react';
-import { NotesContext } from '../../contexts/NotesContext';
+import { useNotes } from '../../contexts/NotesContext';
 import NoteItem from './NoteItem';
 
 export const NoteList = () => {
-  const { notes } = useContext(NotesContext);
+  const { notes } = useNotes();
 
   return (
     <div>
