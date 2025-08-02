@@ -1,5 +1,3 @@
-'use client';
-
 import { createContext, ReactNode, useState, useContext } from 'react';
 import { Note } from '../types';
 
