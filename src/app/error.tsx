@@ -1,7 +1,10 @@
 'use client';
 
-import React from 'react';
-
-export default function ErrorBoundary({ error }: { error: Error }) {
-  return <div>An error occurred: {error.message}</div>;
+export default function ErrorFallback({ error }: { error: Error }) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+    </div>
+  );
 }
