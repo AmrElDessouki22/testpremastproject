@@ -1,5 +1,3 @@
-'use client';
-
 import { useNotes } from '../contexts/NotesContext';
 import NoteInput from '../components/NoteInput';
 import NotesList from '../components/NotesList';
