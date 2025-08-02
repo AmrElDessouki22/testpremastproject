@@ -1,15 +1,15 @@
 'use client';
 
-import { useState, useContext } from 'react';
-import { NotesContext } from '../context/NotesContext';
+import { useState } from 'react';
+import { useNotes } from '../contexts/NotesContext';
 
 export default function NoteInput() {
   const [note, setNote] = useState('');
-  const { addNote } = useContext(NotesContext);
+  const { addNote } = useNotes();
 
   const handleAddNote = () => {
     if (note.trim() === '') return;
-    addNote(note);
+    addNote({ content: note });
     setNote('');
   };
 
