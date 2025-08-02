@@ -1,13 +1,7 @@
-import './globals.css';
-import { ReactNode } from 'react';
-import { NotesProvider } from '../contexts/NotesContext';
+import '../styles/globals.css';
+import { NotesProvider } from '../context/NotesContext';
 
-export const metadata = {
-  title: 'Note App',
-  description: 'A simple note-taking application.',
-};
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
