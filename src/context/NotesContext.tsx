@@ -5,7 +5,7 @@ import { Note } from '../types';
 
 interface NotesContextProps {
   notes: Note[];
-  addNote: (note: string) => void;
+  addNote: (note: Note) => void;
 }
 
 const NotesContext = createContext<NotesContextProps | undefined>(undefined);
@@ -13,8 +13,8 @@ const NotesContext = createContext<NotesContextProps | undefined>(undefined);
 export function NotesProvider({ children }: { children: ReactNode }) {
   const [notes, setNotes] = useState<Note[]>([]);
 
-  const addNote = (note: string) => {
-    setNotes((prevNotes) => [...prevNotes, { content: note }]);
+  const addNote = (note: Note) => {
+    setNotes((prevNotes) => [...prevNotes, note]);
   };
 
   return (
