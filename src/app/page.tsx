@@ -1,12 +1,11 @@
 'use client';
 
-import { useContext } from 'react';
-import { NotesContext } from '../context/NotesContext';
+import { useNotes } from '../contexts/NotesContext';
 import NoteInput from '../components/NoteInput';
 import NotesList from '../components/NotesList';
 
 export default function HomePage() {
-  const { notes } = useContext(NotesContext);
+  const { notes } = useNotes();
 
   return (
     <main className="container">
